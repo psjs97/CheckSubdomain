@@ -15,7 +15,7 @@ with open(sys.argv[2]) as wordlist_file:
     word_list = [word.rstrip() for word in word_list]
 
 # Creating result dataframe empty 
-subdomains_result_df = pd.DataFrame(columns=['domain', 'valid'])
+subdomains_result_df = pd.DataFrame(columns=['subdomain', 'valid'])
 
 # Checking "subdomains"
 for sub in word_list:
