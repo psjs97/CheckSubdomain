@@ -24,13 +24,11 @@ for sub in word_list:
     
     try:
         requests.get(domain)
-    
     except requests.ConnectionError: 
         valid_domain = False
-    
     else:
         valid_domain = True
-        
+
     new_row = {'domain': domain, 'valid': valid_domain}
     subdomains_result_df = subdomains_result_df.append(new_row, ignore_index=True)
     
